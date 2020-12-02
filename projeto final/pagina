@@ -1,0 +1,31 @@
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/site')
+def segunda_pagina () :
+    return """
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Peneira Futebol</title>
+        </head>
+        <body style= "background-color: black;">
+            <center>
+            <h1 style = "color: white;">Peneira de futebol do Abc</h1>
+            font-size: 100px;
+            <h2 style = "color: green;"> Para jovens com nascimento entre 2002 e 2009</h2>
+            <p style = "color: white;">Essa é a sua chance de mostrar seu talento e se tornar a nova Jóia do futebol brasileiro. Inscricões a partir do dia 05 de Dezembro até 5 de Janeiro
+            </p>
+            <p style = "color: purple;"> Taxa de Inscrição : R$ 150,00
+            </p>
+            <a href="https://futebolpeneira.com.br//">
+            <h3 style = "color : yelow;"> </h3>
+             <h3 style = "color : yelow;"> para se inscrever clique aqui -->  https://futebolpeneira.com.br</h3>
+    <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPvbXm4ZnN16mcDRH3D3YDBQurL4MmXXN4EQ&usqp=CAU" height = "50%" width ="80%"></>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpSXftPfIJA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </body>
+    </html>
+    """

@@ -1,0 +1,23 @@
+votos = {"favor":0, "contra":0, "invalido":0}
+
+continuar = True
+while continuar == True :
+  quantidade = float(input('informe A QUANTIDADE DE VOTOS:'))
+  categoria = input('informe uma categoria').lower()
+  if categoria in votos.keys():
+   votos[categoria] += quantidade
+  else:
+    votos["invalido"]+= quantidade 
+  
+    print(votos)
+    continuar = input ('continar?').lower() =='s'
+    total = votos["favor"]+ votos["contra"] + votos ["invalido"]
+    print (total)
+
+    favor=(votos["favor"]/total)*100
+    contra = (votos["contra"]/total)*100
+    invalido =(votos["invalido"]/total)*100
+
+    print (favor,'% dos votos foram a favor.')
+    print (contra,'% dos votos foram contra.')
+    print(invalido,'% dos votos foram invalidos.')

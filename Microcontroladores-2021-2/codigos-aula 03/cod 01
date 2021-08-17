@@ -1,0 +1,7 @@
+do  Pin de importação da máquina  
+
+#Configfura o LED Build em como saída
+p2  =  Pino ( 2 , Pino . SAÍDA )
+
+#Coloca o pino em nível baixo
+p2 . em ()

@@ -1,0 +1,11 @@
+from machine import ADC, Pin
+import time
+#Configuração inicial
+adc = ADC(Pin(36))
+#Ajusta o valor máximo de tensão para 3.6v
+adc.atten(ADC.ATTN_11DB)
+#Realiza 10 leituras
+for i in range(10):
+    valor = adc.read()
+    print('Valor lido na entrada:', valor)
+    time.sleep(1)
